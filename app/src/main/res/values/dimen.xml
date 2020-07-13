@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="textsize">15dp</dimen>
+    <dimen name="buttontextsize">15dp</dimen>
+    <dimen name="backpresswidthandheight">30dp</dimen>
+    <dimen name="toolbartextsize">18dp</dimen>
+</resources>

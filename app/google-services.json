@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "977472746136",
+    "firebase_url": "https://petition-atlas.firebaseio.com",
+    "project_id": "petition-atlas",
+    "storage_bucket": "petition-atlas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977472746136:android:9fbd55ff71f8d6753e96ed",
+        "android_client_info": {
+          "package_name": "com.app.petitionatlas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977472746136-u5bbs0rqltjfhilc1hko7odo86ubt8p7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.petitionatlas",
+            "certificate_hash": "17164678062da759c316ee3646488a98b8c8b1a5"
+          }
+        },
+        {
+          "client_id": "977472746136-albg2ptkh417tcrnchiqojmuhl3jgohm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgbb0PxIKTJlwtsq4n4b8z5HMzoClWPHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977472746136-albg2ptkh417tcrnchiqojmuhl3jgohm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

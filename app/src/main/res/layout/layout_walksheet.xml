@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/walksheetlightbackground">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tl_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextColor="@color/white" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="center"
+            android:text="@string/walksheet"
+            android:textColor="@color/white"
+            android:textSize="@dimen/toolbartextsize"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tl_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tl_toolbar" />
+
+
+        <ImageView
+            android:id="@+id/iv_backpress"
+            android:layout_width="@dimen/backpresswidthandheight"
+            android:layout_height="@dimen/backpresswidthandheight"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tl_toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tl_toolbar" />
+
+        <TextView
+            android:id="@+id/tv_county"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="COUNTY"
+            android:textColor="@color/bachkroundscreencolor"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintStart_toStartOf="@+id/et_county"
+            app:layout_constraintTop_toBottomOf="@+id/tl_toolbar" />
+
+        <Spinner
+            android:id="@+id/et_county"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/edittextbackground"
+            android:paddingLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_county" />
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_arrow_drop_down_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_county"
+            app:layout_constraintEnd_toEndOf="@+id/et_county"
+            app:layout_constraintTop_toTopOf="@+id/et_county" />
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="CITY"
+            android:textColor="@color/bachkroundscreencolor"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintStart_toStartOf="@+id/et_city"
+            app:layout_constraintTop_toBottomOf="@+id/et_county" />
+
+        <Spinner
+            android:id="@+id/et_city"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/edittextbackground"
+            android:paddingLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_city" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_arrow_drop_down_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_city"
+            app:layout_constraintEnd_toEndOf="@+id/et_city"
+            app:layout_constraintTop_toTopOf="@+id/et_city" />
+
+        <TextView
+            android:id="@+id/tv_ward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="WARD"
+            android:textColor="@color/bachkroundscreencolor"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintStart_toStartOf="@+id/et_ward"
+            app:layout_constraintTop_toBottomOf="@+id/et_city" />
+
+        <Spinner
+            android:id="@+id/et_ward"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/edittextbackground"
+            android:paddingLeft="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/et_pct"
+            app:layout_constraintStart_toStartOf="@+id/et_city"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ward" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_arrow_drop_down_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_ward"
+            app:layout_constraintEnd_toEndOf="@+id/et_ward"
+            app:layout_constraintTop_toTopOf="@+id/et_ward" />
+
+        <TextView
+            android:id="@+id/tv_pct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_regular"
+            android:text="PCT"
+            android:textColor="@color/bachkroundscreencolor"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintStart_toStartOf="@+id/et_pct"
+            app:layout_constraintTop_toTopOf="@+id/tv_ward" />
+
+        <Spinner
+            android:id="@+id/et_pct"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edittextbackground"
+            android:paddingLeft="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/et_city"
+            app:layout_constraintStart_toEndOf="@+id/et_ward"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pct" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_arrow_drop_down_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_pct"
+            app:layout_constraintEnd_toEndOf="@+id/et_pct"
+            app:layout_constraintTop_toTopOf="@+id/et_pct" />
+
+        <TextView
+            android:id="@+id/tv_startblock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="START BLOCK"
+            android:textColor="@color/bachkroundscreencolor"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintStart_toStartOf="@+id/et_startblock"
+            app:layout_constraintTop_toBottomOf="@+id/et_street" />
+
+        <EditText
+            android:id="@+id/et_startblock"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/edittextbackground"
+            android:inputType="number"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/et_endblock"
+            app:layout_constraintStart_toStartOf="@+id/et_street"
+            app:layout_constraintTop_toBottomOf="@+id/tv_startblock" />
+
+        <TextView
+            android:id="@+id/tv_endblock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_regular"
+            android:text="END BLOCK"
+            android:textColor="@color/bachkroundscreencolor"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintStart_toStartOf="@+id/et_endblock"
+            app:layout_constraintTop_toTopOf="@+id/tv_startblock" />
+
+        <EditText
+            android:id="@+id/et_endblock"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edittextbackground"
+            android:inputType="number"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/et_street"
+            app:layout_constraintStart_toEndOf="@+id/et_startblock"
+            app:layout_constraintTop_toBottomOf="@+id/tv_endblock" />
+        <TextView
+            android:id="@+id/tv_street"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="STREET"
+            android:textColor="@color/bachkroundscreencolor"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintStart_toStartOf="@+id/et_street"
+            app:layout_constraintTop_toBottomOf="@+id/et_pct" />
+
+        <EditText
+            android:id="@+id/et_street"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/edittextbackground"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_street" />
+
+        <TextView
+            android:id="@+id/tv_gotoaddress"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/backgroundbutton"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="center"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:text="@string/gotoaddress"
+            android:textColor="@color/white"
+            android:textSize="@dimen/buttontextsize"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/et_street"
+            app:layout_constraintStart_toStartOf="@+id/et_street"
+            app:layout_constraintTop_toBottomOf="@+id/et_endblock" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

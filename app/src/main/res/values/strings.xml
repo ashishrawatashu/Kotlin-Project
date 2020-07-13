@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Petition Atlas</string>
+    <string name="dashboardcode">&#xf009;</string>
+    <string name="managementcode">&#xf044;</string>
+    <string name="walksheetcode">&#xf15b;</string>
+    <string name="signoutcode">&#xf08b;</string>
+    <string name="drawer_opened">Open</string>
+    <string name="drawer_closed">Close</string>
+    <string name="gotoaddress">Go to Address</string>
+    <string name="walksheet">Walk Sheet</string>
+    <string name="searchforvoter">Search For Voter</string>
+    <string name="addacontact">Add a Contact</string>
+    <string name="reporting">Reporting</string>
+    <string name="searchvoters">Search Voter</string>
+    <string name="addcontact">Add Contact</string>
+    <string name="back">BACK</string>
+    <string name="save">SAVE</string>
+    <string name="clear">CLEAR</string>
+    <string name="nodatafound">NO DATA FOUND</string>
+    <string name="reportingtext">To come. It would be good to be able to show the volunteer how many doors they knocked and how many signatures they collected in any given session.</string>
+</resources>

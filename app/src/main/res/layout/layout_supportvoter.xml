@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/walksheetlightbackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tb_supporttoolbar"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Voter Information"
+            android:textColor="@color/white"
+            android:textSize="@dimen/toolbartextsize"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tb_supporttoolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tb_supporttoolbar" />
+
+        <ImageView
+            android:id="@+id/iv_supportbackpress"
+            android:layout_width="@dimen/backpresswidthandheight"
+            android:layout_height="@dimen/backpresswidthandheight"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tb_supporttoolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tb_supporttoolbar" />
+
+        <TextView
+            android:id="@+id/tv_filltextview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="Please Fill Out Following"
+            android:textColor="@color/bachkroundscreencolor"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tb_supporttoolbar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_userinfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/backgroundbutton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_filltextview">
+
+            <TextView
+                android:id="@+id/supportvoter_username"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/supportvoter_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/supportvoter_username" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tv_signature"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="Collect Signature ?"
+            android:textColor="@color/bachkroundscreencolor"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_userinfo" />
+
+
+        <Spinner
+            android:id="@+id/sp_signaturestatus"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/holospinnerbacground"
+            android:paddingLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_signature" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_arrow_drop_down_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/sp_signaturestatus"
+            app:layout_constraintEnd_toEndOf="@+id/sp_signaturestatus"
+            app:layout_constraintTop_toTopOf="@+id/sp_signaturestatus" />
+
+        <TextView
+            android:id="@+id/tv_support"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="Support"
+            android:textColor="@color/bachkroundscreencolor"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sp_signaturestatus" />
+
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/rb_voterrating"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:isIndicator="false"
+            android:numStars="5"
+            android:progressBackgroundTint="@color/lightspinnercolor"
+            android:saveEnabled="true"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:stepSize="1.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_support"
+            app:layout_constraintTop_toBottomOf="@+id/tv_support" />
+
+        <TextView
+            android:id="@+id/tv_supportnotescampaign"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="Notes for campaign"
+            android:textColor="@color/bachkroundscreencolor"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rb_voterrating" />
+
+
+        <EditText
+            android:id="@+id/et_notecampaign"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/backgroundbutton"
+            android:cursorVisible="true"
+            android:gravity="top"
+            android:lines="5"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_supportnotescampaign" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Email"
+            android:textColor="@color/bachkroundscreencolor"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintEnd_toEndOf="@+id/tv_supportnotescampaign"
+            app:layout_constraintStart_toStartOf="@+id/tv_supportnotescampaign"
+            app:layout_constraintTop_toBottomOf="@+id/et_notecampaign" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/backgroundbutton"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
+        <TextView
+            android:id="@+id/tv_mobilenumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Phone Number"
+            android:textColor="@color/bachkroundscreencolor"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintEnd_toEndOf="@+id/tv_supportnotescampaign"
+            app:layout_constraintStart_toStartOf="@+id/tv_supportnotescampaign"
+            app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+        <EditText
+            android:id="@+id/et_mobilenumber"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/backgroundbutton"
+            android:inputType="number"
+            android:maxLength="10"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mobilenumber" />
+
+        <TextView
+            android:id="@+id/tv_signaturepad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Signature"
+            android:textColor="@color/bachkroundscreencolor"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintEnd_toEndOf="@+id/signature_pad"
+            app:layout_constraintStart_toStartOf="@+id/signature_pad"
+            app:layout_constraintTop_toBottomOf="@+id/et_mobilenumber" />
+
+        <com.github.gcacace.signaturepad.views.SignaturePad
+            android:id="@+id/signature_pad"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/signaturepad_background"
+            app:clearOnDoubleClick="false"
+            app:layout_constraintEnd_toEndOf="@+id/et_mobilenumber"
+            app:layout_constraintStart_toStartOf="@+id/et_mobilenumber"
+            app:layout_constraintTop_toBottomOf="@+id/tv_signaturepad"
+            app:penColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="clear signature"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/buttontextsize"
+            app:layout_constraintStart_toStartOf="@+id/signature_pad"
+            app:layout_constraintTop_toBottomOf="@+id/signature_pad" />
+
+        <TextView
+            android:id="@+id/tv_supportsave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/holobuttonbackground"
+            android:gravity="center"
+            android:paddingLeft="40dp"
+            android:paddingTop="10dp"
+            android:paddingRight="40dp"
+            android:paddingBottom="10dp"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/buttontextsize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/et_notecampaign"
+            app:layout_constraintStart_toStartOf="@+id/et_notecampaign"
+            app:layout_constraintTop_toBottomOf="@+id/tv_clear" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

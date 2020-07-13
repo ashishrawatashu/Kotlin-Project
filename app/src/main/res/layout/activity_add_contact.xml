@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/walksheetlightbackground"
+    tools:context=".activities.AddContactActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tl_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextColor="@color/white" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="center"
+            android:text="@string/addacontact"
+            android:textColor="@color/white"
+            android:textSize="@dimen/toolbartextsize"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tl_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tl_toolbar" />
+
+        <ImageView
+            android:id="@+id/iv_contactbackpress"
+            android:layout_width="@dimen/backpresswidthandheight"
+            android:layout_height="@dimen/backpresswidthandheight"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tl_toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tl_toolbar" />
+
+        <TextView
+            android:id="@+id/tv_firstname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="First Name"
+            android:textColor="@color/bachkroundscreencolor"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintStart_toStartOf="@+id/et_firstname"
+            app:layout_constraintTop_toBottomOf="@+id/tl_toolbar" />
+
+        <EditText
+            android:id="@+id/et_firstname"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/edittextbackground"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_firstname" />
+
+
+        <TextView
+            android:id="@+id/tv_lastname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="Last Name"
+            android:textColor="@color/bachkroundscreencolor"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintStart_toStartOf="@+id/et_lastname"
+            app:layout_constraintTop_toBottomOf="@+id/et_firstname" />
+
+        <EditText
+            android:id="@+id/et_lastname"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:maxLines="1"
+            android:background="@drawable/edittextbackground"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lastname" />
+
+        <TextView
+            android:id="@+id/tv_housenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="House Number"
+            android:textColor="@color/bachkroundscreencolor"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintStart_toStartOf="@+id/et_housenumber"
+            app:layout_constraintTop_toBottomOf="@+id/et_lastname" />
+
+        <EditText
+            android:id="@+id/et_housenumber"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:maxLines="1"
+            android:inputType="number"
+            android:background="@drawable/edittextbackground"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_housenumber" />
+
+        <TextView
+            android:id="@+id/tv_streetname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="Street"
+            android:textColor="@color/bachkroundscreencolor"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintStart_toStartOf="@+id/et_streetname"
+            app:layout_constraintTop_toBottomOf="@+id/et_housenumber" />
+
+        <EditText
+            android:id="@+id/et_streetname"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:maxLines="1"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/edittextbackground"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_streetname" />
+
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="Phone"
+            android:textColor="@color/bachkroundscreencolor"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintStart_toStartOf="@+id/et_phone"
+            app:layout_constraintTop_toBottomOf="@+id/et_streetname" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:background="@drawable/edittextbackground"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_phone" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="Email"
+            android:textColor="@color/bachkroundscreencolor"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintStart_toStartOf="@+id/et_email"
+            app:layout_constraintTop_toBottomOf="@+id/et_phone" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:maxLines="1"
+            android:background="@drawable/edittextbackground"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
+
+        <TextView
+            android:id="@+id/tv_notesforcampaign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="Notes For Campaign"
+            android:textColor="@color/bachkroundscreencolor"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintStart_toStartOf="@+id/et_notesforcampaign"
+            app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+        <EditText
+            android:id="@+id/et_notesforcampaign"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:gravity="top"
+            android:lines="5"
+            android:background="@drawable/edittextbackground"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_notesforcampaign" />
+
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/backgroundbutton"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/buttontextsize"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_clear"
+            app:layout_constraintEnd_toEndOf="@+id/et_notesforcampaign"
+            app:layout_constraintTop_toBottomOf="@+id/et_notesforcampaign" />
+
+        <TextView
+            android:id="@+id/tv_clear"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/backgroundbutton"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:text="@string/clear"
+            android:textColor="@color/white"
+            android:textSize="@dimen/buttontextsize"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_save"
+            app:layout_constraintStart_toStartOf="@+id/et_notesforcampaign"
+            app:layout_constraintTop_toBottomOf="@+id/et_notesforcampaign" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

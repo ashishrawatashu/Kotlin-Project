@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#128598</color>
+    <color name="colorPrimaryDark">#128598</color>
+    <color name="lightratingcolor">#18b2cd</color>
+    <color name="lightspinnercolor">#18b2cd</color>
+    <color name="colorAccent">#128598</color>
+    <color name="white">#ffffff</color>
+    <color name="lightgrey">#D3D3D3</color>
+    <color name="bachkroundscreencolor">#253544</color>
+    <color name="supportvoterbackground">#d0d4db</color>
+    <color name="bottomreporting">#44483c</color>
+    <color name="redcolor">#A84037</color>
+    <color name="goldencolor">#D7951C</color>
+</resources>

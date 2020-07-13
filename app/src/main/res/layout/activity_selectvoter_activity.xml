@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_refresh"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgrey"
+    tools:context=".activities.Selectvoter_activity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_reporting"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Select Voter"
+        android:textColor="@color/white"
+        android:textSize="@dimen/toolbartextsize"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tb_reporting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tb_reporting" />
+
+    <ImageView
+        android:id="@+id/iv_selectback"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tb_reporting"
+        app:layout_constraintBottom_toBottomOf="@+id/tb_reporting"/>
+
+    <EditText
+        android:id="@+id/et_searchbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Search Here"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="35dp"
+        android:maxLines="1"
+        android:textSize="@dimen/textsize"
+        app:layout_constraintStart_toStartOf="@+id/rv_addresselectorvoters"
+        app:layout_constraintEnd_toEndOf="@+id/rv_addresselectorvoters"
+        app:layout_constraintTop_toBottomOf="@+id/tb_reporting"/>
+
+    <ImageView
+        android:id="@+id/iv_searchimage"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="15dp"
+        android:elevation="12dp"
+        android:outlineProvider="none"
+        android:tint="@color/colorPrimary"
+        android:src="@drawable/serach"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="@id/et_searchbar"
+        app:layout_constraintEnd_toEndOf="@+id/et_searchbar"
+        app:layout_constraintTop_toTopOf="@id/et_searchbar">
+
+    </ImageView>
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_fillselectortextview"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:fontFamily="@font/lato_regular"-->
+<!--        android:text="Please Select Voter :"-->
+<!--        android:textColor="@color/bachkroundscreencolor"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:textSize="16dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/et_searchbar" />-->
+
+
+    <TextView
+        android:id="@+id/tv_nodatafound"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/nodatafound"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:visibility="gone"
+        android:textSize="@dimen/textsize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_searchbar"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_addresselectorvoters"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_searchbar" />
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:weightSum="1"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tv_fillselectortextview">-->
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/cl_userselectorinfo"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:layout_weight="0.6"-->
+<!--            android:background="@drawable/backgroundbutton"-->
+<!--            android:paddingRight="5dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/selectvoter_username"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="start"-->
+<!--                android:paddingLeft="20dp"-->
+<!--                android:paddingTop="5dp"-->
+<!--                android:text="Bob Jhones"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="@dimen/textsize"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_selectorvoteraddress"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingLeft="20dp"-->
+<!--                android:paddingBottom="5dp"-->
+<!--                android:text="1234 Atlas Street"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="@dimen/textsize"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/cl_userselectorinfo"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/selectvoter_username" />-->
+
+
+<!--            <ImageView-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_marginLeft="30dp"-->
+<!--                android:src="@drawable/ic_chevron_right_white_24dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/tv_selectorvoteraddress"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/selectvoter_username" />-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_firstnh"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:layout_weight="0.2"-->
+<!--            android:background="@drawable/backgroundbutton"-->
+<!--            android:gravity="center"-->
+<!--            android:paddingTop="13dp"-->
+<!--            android:paddingBottom="13dp"-->
+<!--            android:text="NH"-->
+<!--            android:textColor="@color/white" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_secondnh"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:layout_weight="0.2"-->
+<!--            android:background="@drawable/backgroundbutton"-->
+<!--            android:gravity="center"-->
+<!--            android:paddingTop="13dp"-->
+<!--            android:paddingBottom="13dp"-->
+<!--            android:text="IN"-->
+<!--            android:textColor="@color/white" />-->
+
+<!--    </LinearLayout>-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
