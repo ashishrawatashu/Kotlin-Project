@@ -51,9 +51,6 @@ import java.io.IOException
 import java.util.*
 
 class HomeActivity : AppCompatActivity(), View.OnClickListener, DashboardView {
-
-    private val TAG = "HOMEACTIVITY_LOG"
-
     var mDrawerToggle: ActionBarDrawerToggle? = null
     lateinit var sharedValues: SharedValues
     lateinit var context: Activity
@@ -76,7 +73,6 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener, DashboardView {
             tv_dashboardiconuserName?.setText(sharedValues.getpreferance(SharedValues.USERNAME))
         }
         if (sharedValues.getpreferance(SharedValues.MAINCAMPAIGNNAME)?.trim()?.length!! > 0) {
-//            tv_dashboardcompaignname?.setText("(" + sharedValues.getpreferance(SharedValues.MAINCAMPAIGNNAME).toString() + ")")
             tv_compaign?.setText(sharedValues.getpreferance(SharedValues.MAINCAMPAIGNNAME))
         }
         if (sharedValues.getpreferance(SharedValues.IsAdmin)?.trim()?.length!! > 0) {
@@ -148,12 +144,12 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener, DashboardView {
                     Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
                 startActivity(intent)
             }
-            R.id.cl_addcontact ->{
+            R.id.cl_addcontact -> {
                 drawer_layout!!.closeDrawers()
                 val intent = Intent(this@HomeActivity, AddContactActivity::class.java)
                 startActivity(intent)
             }
-            R.id.cl_searchvoters ->{
+            R.id.cl_searchvoters -> {
                 drawer_layout!!.closeDrawers()
                 val intent = Intent(this@HomeActivity, SearchVoter::class.java)
                 startActivity(intent)
@@ -164,22 +160,32 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener, DashboardView {
     override fun OnSuccess(dashboardResponse: DashboardResponse?) {
         Toast.makeText(context, "Succcess", Toast.LENGTH_SHORT)
         if (dashboardResponse != null) {
-            if (dashboardResponse.getVoterCount() != null && dashboardResponse.getVoterCount()?.trim()!!.length > 0) {
+            if (dashboardResponse.getVoterCount() != null && dashboardResponse.getVoterCount()
+                    ?.trim()!!.length > 0
+            ) {
                 tv_answer1.text = dashboardResponse.getVoterCount();
             }
-            if (dashboardResponse.getTargetedSignaturesCount() != null && dashboardResponse.getTargetedSignaturesCount()?.trim()!!.length > 0) {
+            if (dashboardResponse.getTargetedSignaturesCount() != null && dashboardResponse.getTargetedSignaturesCount()
+                    ?.trim()!!.length > 0
+            ) {
 
                 tv_answer2.text = dashboardResponse.getTargetedSignaturesCount();
             }
-            if (dashboardResponse.getCollectedSignaturesCount() != null && dashboardResponse.getCollectedSignaturesCount()?.trim()!!.length > 0) {
+            if (dashboardResponse.getCollectedSignaturesCount() != null && dashboardResponse.getCollectedSignaturesCount()
+                    ?.trim()!!.length > 0
+            ) {
                 tv_answer3.text = dashboardResponse.getCollectedSignaturesCount();
             }
             var collectedsignatute: Int = 0
             var multiple: Int = 0
             var totalpercentage: Int = 0
 
-            if (dashboardResponse.getCollectedSignaturesCount() != null && dashboardResponse.getCollectedSignaturesCount()?.trim()!!.length > 0) {
-                if (dashboardResponse.getTargetedSignaturesCount() != null && dashboardResponse.getTargetedSignaturesCount()?.trim()!!.length > 0) {
+            if (dashboardResponse.getCollectedSignaturesCount() != null && dashboardResponse.getCollectedSignaturesCount()
+                    ?.trim()!!.length > 0
+            ) {
+                if (dashboardResponse.getTargetedSignaturesCount() != null && dashboardResponse.getTargetedSignaturesCount()
+                        ?.trim()!!.length > 0
+                ) {
 
                     collectedsignatute = dashboardResponse.getCollectedSignaturesCount()!!.toInt()
                     if (collectedsignatute != 0) {
@@ -221,5 +227,4 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener, DashboardView {
     override fun hideprogress() {
         if (GlobalVariabels.mProgressDialog != null) GlobalVariabels.dismissProgress()
     }
-
 }

@@ -4,7 +4,7 @@ class DashboardResponse {
 
     private var collectedSignaturesCount: String? = null
 
-    private var voterCount: String? = null
+    private var registeredVotersCount: String? = null
 
     private var targetedSignaturesCount: String? = null
 
@@ -17,11 +17,11 @@ class DashboardResponse {
     }
 
     fun getVoterCount(): String? {
-        return voterCount
+        return registeredVotersCount
     }
 
     fun setVoterCount(voterCount: String?) {
-        this.voterCount = voterCount
+        this.registeredVotersCount = voterCount
     }
 
     fun getTargetedSignaturesCount(): String? {
@@ -33,7 +33,7 @@ class DashboardResponse {
     }
 
     override fun toString(): String {
-        return "ClassPojo [collectedSignaturesCount = $collectedSignaturesCount, voterCount = $voterCount, targetedSignaturesCount = $targetedSignaturesCount]"
+        return "ClassPojo [collectedSignaturesCount = $collectedSignaturesCount, registeredVotersCount = $registeredVotersCount, targetedSignaturesCount = $targetedSignaturesCount]"
     }
 
 }
