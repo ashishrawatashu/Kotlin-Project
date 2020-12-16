@@ -26,7 +26,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, LoginView {
     lateinit var loginPresentor: LoginPresentor
     lateinit var sharedValues: SharedValues
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_logincardview)

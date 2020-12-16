@@ -5,7 +5,6 @@ import com.app.petitionatlas.globalvariables.GlobalVariabels
 import com.app.petitionatlas.params.LoginParams
 import com.app.petitionatlas.response.loginreponse.LoginResponse
 import com.app.petitionatlas.retrofit.WebServiceFactory
-import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
@@ -15,13 +14,13 @@ class LoginInteractorImpl : LoginInteractor {
         loginParams: LoginParams?,
         onFinishListener: LoginInteractor.OnFinishListener?
     ) {
-        val loginResponseCall: Call<LoginResponse> = WebServiceFactory.instance!!.loginResponseCall(
+        val loginResponseCall: retrofit2.Call<LoginResponse> = WebServiceFactory.instance!!.loginResponseCall(
             GlobalVariabels.CONTENT_TYPE,
             loginParams
         )
         loginResponseCall.enqueue(object : Callback<LoginResponse> {
             override fun onResponse(
-                call: Call<LoginResponse?>?,
+                call: retrofit2.Call<LoginResponse?>?,
                 response: Response<LoginResponse?>?
             ) {
                 if (response != null) {
@@ -47,7 +46,7 @@ class LoginInteractorImpl : LoginInteractor {
                 }
             }
 
-            override fun onFailure(call: Call<LoginResponse?>?, t: Throwable) {
+            override fun onFailure(call: retrofit2.Call<LoginResponse?>?, t: Throwable) {
                 Log.d("response123456", "chrck5=> "+t)
                 onFinishListener?.OnFailure(t.toString())
             }
